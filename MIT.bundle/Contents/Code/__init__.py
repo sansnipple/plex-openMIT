@@ -19,6 +19,7 @@
 # Known issues:
 #	because the audio is listed with the videos under the videos section in plex, it refuses to open the visualizer for it
 # only gets part of of 2 part mp3s, affects only one audio course.
+# wont seek in audio, i think its cause i cant find a place to scrape duration
 # one audio course i cant pin down, wont open "Symmetry, Structure, and Tensor Properties of Materials"
 # cant play rm audio, so it show just empty folder, only one occurance of this
 # Needs art
@@ -86,7 +87,7 @@ def audio(sender):
 
 def getListing(sender, title2, url, media):
 	dir = MediaContainer(title2=title2)
-	# these are a real bitch, there's like 3 differnt versions of each page, espisially audio, hence all the nested if statements
+	# these are a real bitch, there's like 5 differnt versions of each page, espisially audio, hence all the nested if statements
 	
 	# For Video Courses
 	if media == "video":
